@@ -7,12 +7,12 @@ import { NotFoundComponent } from './not-found/not-found.component';
 const routes: Routes = [
   { path: 'company-info', component: CompanyInfoComponent },
   { path: '', component: HomeComponent },
-  { path: 'about', redirectTo: ''},
+  { path: 'about', redirectTo: 'company-info' },
   { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class PublicRoutingModule { }
+export class PublicRoutingModule {}
